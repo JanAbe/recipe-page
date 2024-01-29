@@ -61,6 +61,12 @@ img {
   padding: .5rem;
 }
 
+.card > ul > li::marker {
+  content: "•";
+  color: var(--card-title-color);
+  font-weight: bold;
+}
+
 .card > h3 {
   color: var(--card-title-color);
   margin-left: 1rem;
@@ -101,9 +107,12 @@ img {
   font-weight: bold;
 }
 
+.nutrition-section {
+  padding-bottom: 2rem;
+}
+
 .nutrition-table {
   width: 100%;
-  text-align: center;
   border-collapse: collapse;
 }
 
@@ -116,15 +125,24 @@ img {
   font-weight: bold;
 }
 
-@media (min-width: 85em) {
+td {
+  padding: .75rem;
+}
+
+tr:last-child {
+  border-bottom: none;
+}
+
+@media (min-width: 375px) {
   body {
     background-color: var(--background-color-desktop);
   }
 
   main {
     background-color: white;
-    margin: 5rem 35rem;
+    margin: 5rem auto 0 auto;
     border-radius: 1rem;
+    max-width: 750px;
   }
 
   .img-wrapper {
@@ -138,10 +156,5 @@ img {
 
   td {
     padding: 1rem;
-  }
-
-  .nutrition-table {
-    padding-bottom: 2rem;
-    text-align: left;
   }
 }
